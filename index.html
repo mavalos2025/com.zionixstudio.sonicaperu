@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad | Sónica Perú - Radios en Vivo</title>
+    <meta name="description" content="Política de Privacidad oficial de Sónica Perú - Radios en Vivo (com.zionixstudio.sonicaperu). Transparencia en datos, publicidad AdMob, analítica Firebase y streaming de audio en vivo.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-obsidian: #060913;
+            --bg-space: #0B101D;
+            --bg-card: rgba(17, 24, 39, 0.75);
+            --bg-card-hover: rgba(31, 41, 61, 0.75);
+            --border-subtle: rgba(56, 189, 248, 0.18);
+            --border-active: rgba(255, 30, 86, 0.6);
+            --cyber-cyan: #00F2FE;
+            --electric-coral: #FF1E56;
+            --neon-purple: #9D00FF;
+            --sunburst-gold: #FFB800;
+            --neon-emerald: #00FF88;
+            --text-white: #F8FAFC;
+            --text-muted: #94A3B8;
+            --text-dark: #64748B;
+            --primary-gradient: linear-gradient(135deg, #FF1E56 0%, #7928CA 50%, #00F2FE 100%);
+            --header-gradient: linear-gradient(180deg, rgba(11, 16, 29, 0.95) 0%, rgba(6, 9, 19, 0.98) 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-obsidian);
+            color: var(--text-white);
+            line-height: 1.65;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 10%, rgba(255, 30, 86, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 25%, rgba(0, 242, 254, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 50% 85%, rgba(157, 0, 255, 0.06) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 24px 20px 80px 20px;
+        }
+
+        /* Top Navbar */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: var(--header-gradient);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 16px 0;
+            margin-bottom: 32px;
+        }
+
+        .nav-inner {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand-group {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.35);
+            font-size: 22px;
+        }
+
+        .brand-text h1 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge-live {
+            background: var(--electric-coral);
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: 6px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .brand-text p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Language Toggle */
+        .lang-switch {
+            display: flex;
+            background: rgba(31, 41, 61, 0.8);
+            border: 1px solid var(--border-subtle);
+            border-radius: 30px;
+            padding: 3px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 6px 14px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--cyber-cyan);
+            color: #060913;
+            box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
+        }
+
+        /* Hero Banner */
+        .hero-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 32px 28px;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-gradient);
+        }
+
+        .hero-title {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #FFFFFF 30%, var(--cyber-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 14px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .meta-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+        }
+
+        .meta-pill.highlight {
+            border-color: rgba(0, 242, 254, 0.4);
+            color: var(--cyber-cyan);
+        }
+
+        /* Highlights Grid */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-bottom: 36px;
+        }
+
+        .mini-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .mini-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--cyber-cyan);
+        }
+
+        .mini-card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .mini-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 6px;
+        }
+
+        .mini-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Sections */
+        .section-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 24px;
+            transition: border-color 0.2s;
+        }
+
+        .section-box:hover {
+            border-color: rgba(0, 242, 254, 0.35);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .section-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            background: rgba(0, 242, 254, 0.15);
+            color: var(--cyber-cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.9rem;
+            font-family: 'JetBrains Mono', monospace;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-white);
+        }
+
+        .section-box p {
+            color: #CBD5E1;
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+            line-height: 1.7;
+        }
+
+        .section-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 12px 0;
+        }
+
+        .section-box ul li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: #CBD5E1;
+            font-size: 0.93rem;
+            line-height: 1.6;
+        }
+
+        .section-box ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 4px;
+            top: 0;
+            color: var(--cyber-cyan);
+            font-weight: bold;
+        }
+
+        /* Callout Box */
+        .callout {
+            background: rgba(0, 242, 254, 0.06);
+            border-left: 4px solid var(--cyber-cyan);
+            border-radius: 8px;
+            padding: 16px 18px;
+            margin: 16px 0;
+            font-size: 0.9rem;
+            color: #E2E8F0;
+        }
+
+        .callout.alert {
+            background: rgba(255, 30, 86, 0.08);
+            border-left-color: var(--electric-coral);
+        }
+
+        .callout strong {
+            color: var(--text-white);
+        }
+
+        /* Table */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 16px 0;
+            border-radius: 12px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.88rem;
+        }
+
+        th {
+            background: rgba(31, 41, 61, 0.9);
+            color: var(--cyber-cyan);
+            padding: 12px 16px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+
+        td {
+            padding: 12px 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            color: #CBD5E1;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.12) 0%, rgba(0, 242, 254, 0.08) 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 32px 28px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-box h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--text-white);
+        }
+
+        .contact-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        .email-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-space);
+            border: 1px solid var(--cyber-cyan);
+            color: var(--cyber-cyan);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
+            transition: all 0.25s ease;
+        }
+
+        .email-badge:hover {
+            transform: scale(1.03);
+            background: var(--cyber-cyan);
+            color: #060913;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+            color: var(--text-dark);
+            font-size: 0.82rem;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--cyber-cyan);
+        }
+
+        /* Language content container toggling */
+        .lang-content {
+            display: block;
+        }
+
+        .lang-content.hidden {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            .hero-card {
+                padding: 22px 18px;
+            }
+            .hero-title {
+                font-size: 1.45rem;
+            }
+            .section-box {
+                padding: 20px 16px;
+            }
+            .nav-inner {
+                padding: 0 16px;
+            }
+            .brand-text p {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-inner">
+            <a href="#" class="brand-group">
+                <div class="brand-logo">📻</div>
+                <div class="brand-text">
+                    <h1>Sónica Perú <span class="badge-live">EN VIVO</span></h1>
+                    <p>com.zionixstudio.sonicaperu</p>
+                </div>
+            </a>
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
+                <button type="button" class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- ======================= SPANISH CONTENT ======================= -->
+        <div id="content-es" class="lang-content">
+            <section class="hero-card">
+                <h2 class="hero-title">Política de Privacidad Oficial</h2>
+                <p style="color: var(--text-muted); font-size: 1rem;">
+                    Transparencia absoluta en el tratamiento de datos y privacidad para los usuarios de <strong>Sónica Perú - Radios en Vivo HD</strong>.
+                </p>
+                <div class="hero-meta">
+                    <span class="meta-pill highlight">ID: com.zionixstudio.sonicaperu</span>
+                    <span class="meta-pill">Desarrollador: Zionix Studio / Marko Avalos</span>
+                    <span class="meta-pill">Vigencia: Octubre 2026</span>
+                </div>
+            </section>
+
+            <!-- Quick Pillars -->
+            <div class="grid-cards">
+                <div class="mini-card">
+                    <span class="mini-card-icon">⚡</span>
+                    <h3>Streaming Puro en Vivo</h3>
+                    <p>No almacenamos, interceptamos ni grabamos secuencias de audio. Transmisión 100% directa en tiempo real.</p>
+                </div>
+                <div class="mini-card">
+                    <span class="mini-card-icon">🛡️</span>
+                    <h3>Sin Registro Obligatorio</h3>
+                    <p>No recopilamos nombres, contraseñas, números telefónicos ni datos bancarios. Acceso libre sin registro.</p>
+                </div>
+                <div class="mini-card">
+                    <span class="mini-card-icon">🎯</span>
+                    <h3>Anuncios y Analítica Segura</h3>
+                    <p>Utilizamos Google AdMob y Firebase mediante identificadores móviles anónimos auditados por Google Play.</p>
+                </div>
+            </div>
+
+            <!-- Clause 1: Service Type -->
+            <article class="section-box">
+                <div class="section-header">
+                    <div class="section-number">01</div>
+                    <h2 class="section-title">Tipo de Servicio y Transmisión de Audio en Vivo</h2>
+                </div>
+                <p>
+                    <strong>Sónica Perú - Radios en Vivo</strong> es una aplicación nativa diseñada exclusivamente para la sintonización y reproducción de señales de radio en directo (emisoras peruanas FM, AM y señal digital pública) mediante protocolos de streaming estándar (HLS, AAC, MP3, Icecast).
+                </p>
+                <div class="callout">
+                    <strong>Compromiso Legal de Streaming:</strong> La aplicación <strong>NO almacena, NO intercepta, NO graba ni redistribuye</strong> ninguna secuencia de audio de las emisoras transmitidas, ni en servidores externos ni de forma persistente en el dispositivo del usuario. Todo el flujo de audio se procesa en memoria volátil en tiempo real mientras el reproductor está activo.
+                </div>
+                <p>
+                    Todos los derechos de autor, logotipos, nombres comerciales y contenidos transmitidos por las emisoras pertenecen a sus respectivos propietarios y concesionarios de radiodifusión.
+                </p>
+            </article>
+
+            <!-- Clause 2: Third-party SDKs & Data Transparency -->
+            <article class="section-box">
+                <div class="section-header">
+                    <div class="section-number">02</div>
+                    <h2 class="section-title">Transparencia en Datos, Publicidad y Analítica</h2>
+                </div>
+                <p>
+                    Para garantizar la sostenibilidad técnica del servicio gratuito y la continua optimización de estabilidad en dispositivos móviles, la aplicación integra herramientas tecnológicas provistas por Google LLC:
+                </p>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Proveedor / SDK</th>
+                                <th>Finalidad</th>
+                                <th>Datos Procesados</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Google AdMob</strong></td>
+                                <td>Monetización y despliegue de anuncios publicitarios (banners, intersticiales).</td>
+                                <td>Identificador de Publicidad de Android (AAID / GAID) o IDFA de iOS, interacciones con anuncios, IP aproximada a nivel ciudad/país.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google Analytics for Firebase</strong></td>
+                                <td>Métricas de telemetría de uso y rendimiento general de la app.</td>
+                                <td>Modelo de dispositivo, versión del sistema operativo, eventos de pantalla (ej. cambio de estación), sesiones anónimas.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Firebase Crashlytics</strong></td>
+                                <td>Diagnóstico y corrección inmediata de errores y cierres inesperados.</td>
+                                <td>Trazas de error técnico (stack traces), estado de memoria del dispositivo al ocurrir una falla.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout">
+                    <strong>Aviso de Identificadores Móviles:</strong> Los identificadores publicitarios (AAID/IDFA) son cadenas anónimas y rotativas asignadas por el sistema operativo que no revelan su identidad civil, ni acceden a su lista de contactos, correos electrónicos o archivos personales.
+                </div>
+            </article>
+
+            <!-- Clause 3: Device Permissions -->
+            <article class="section-box">
+                <div class="section-header">
+                    <div class="section-number">03</div>
+                    <h2 class="section-title">Permisos del Dispositivo Solicitados</h2>
+                </div>
+                <p>
+                    La aplicación solicita únicamente los permisos estrictamente indispensables para su funcionamiento como reproductor multimedia moderno en Android e iOS:
+                </p>
+                <ul>
+                    <li><strong>Acceso a Internet y Estado de Red (<code>android.permission.INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong> Necesario para conectarse a las transmisiones de audio online y seleccionar streams de respaldo si la conexión se degrada.</li>
+                    <li><strong>Servicio en Primer Plano y Reproducción Multimedia (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>):</strong> Permite que la radio continúe sonando con la pantalla bloqueada o mientras utilizas otras aplicaciones (motor AndroidX Media3).</li>
+                    <li><strong>Notificaciones y Controles de Medios (<code>POST_NOTIFICATIONS</code>):</strong> Muestra la carátula, nombre de la estación y controles de pausa/reproducción en la barra de notificaciones y pantalla de bloqueo.</li>
+                    <li><strong>Mantenimiento de Energía (<code>WAKE_LOCK</code>):</strong> Evita que el procesador entre en suspensión profunda durante una sesión activa de reproducción de audio.</li>
+                </ul>
+                <div class="callout alert">
+                    <strong>Privacidad Garantizada:</strong> Sónica Perú <strong>NUNCA</strong> solicita permisos sensibles como Cámara, Micrófono, Contactos, Almacenamiento Compartido, Historial de Llamadas ni Ubicación GPS precisa.
+                </div>
+            </article>
+
+            <!-- Clause 4: User Rights & Global Standards -->
+            <article class="section-box">
+                <div class="section-header">
+                    <div class="section-number">04</div>
+                    <h2 class="section-title">Derechos del Usuario y Estándares de Protección de Datos</h2>
+                </div>
+                <p>
+                    Reconocemos y garantizamos el ejercicio de los derechos de privacidad de todos nuestros usuarios bajo las normativas aplicables:
+                </p>
+                <ul>
+                    <li><strong>Perú - Ley N° 29733 (Ley de Protección de Datos Personales):</strong> Derecho de información, revocación y ejercicio de los derechos ARCO (Acceso, Rectificación, Cancelación y Oposición).</li>
+                    <li><strong>Unión Europea - RGPD / GDPR:</strong> Derecho a la limitación del tratamiento, supresión de datos y oposición a la elaboración de perfiles publicitarios.</li>
+                    <li><strong>Estados Unidos - CCPA / CPRA (California):</strong> Derecho a optar por no participar en la venta o uso compartido de identificadores de publicidad dirigida.</li>
+                </ul>
+
+                <h3 style="font-size: 1.05rem; margin-top: 18px; margin-bottom: 8px; color: var(--cyber-cyan);">
+                    ¿Cómo restablecer o limitar los identificadores de publicidad en tu dispositivo?
+                </h3>
+                <p>
+                    Puedes controlar y limitar en cualquier momento la publicidad personalizada directamente desde la configuración de tu teléfono móvil:
+                </p>
+                <ul>
+                    <li><strong>En Android:</strong> Abre <em>Ajustes &gt; Google &gt; Anuncios</em> (o <em>Privacidad &gt; Anuncios</em>) y selecciona <em>"Restablecer ID de publicidad"</em> o <em>"Eliminar ID de publicidad"</em>.</li>
+                    <li><strong>En iOS:</strong> Abre <em>Ajustes &gt; Privacidad y Seguridad &gt; Rastreo</em> y desactiva la opción <em>"Permitir que las apps soliciten rastrearte"</em>.</li>
+                </ul>
+            </article>
+
+            <!-- Clause 5: Children Privacy -->
+            <article class="section-box">
+                <div class="section-header">
+                    <div class="section-number">05</div>
+                    <h2 class="section-title">Protección de la Privacidad de los Menores (COPPA)</h2>
+                </div>
+                <p>
+                    Nuestros servicios no están dirigidos a menores de 13 años (o 16 años dentro del Espacio Económico Europeo). No recopilamos deliberadamente ningún dato de identificación de menores. Si un padre, madre o tutor legal toma conocimiento de que un menor ha interactuado indebidamente con la aplicación o desea requerir la exclusión de cualquier información, puede contactarnos inmediatamente a nuestro canal de soporte.
+                </p>
+            </article>
+
+            <!-- Clause 6: Security & Updates -->
+            <article class="section-box">
+                <div class="section-header">
+                    <div class="section-number">06</div>
+                    <h2 class="section-title">Seguridad de la Información y Cambios</h2>
+                </div>
+                <p>
+                    Implementamos protocolos de seguridad estándar de la industria, incluyendo transmisión encriptada mediante TLS/HTTPS para la carga de datos del catálogo y consultas seguras.
+                </p>
+                <p>
+                    Esta política puede actualizarse periódicamente para reflejar mejoras en la aplicación, nuevas características o requerimientos normativos de Google Play Store. Cualquier cambio sustancial será documentado en este sitio con indicación expresa de su fecha de vigencia.
+                </p>
+            </article>
+
+            <!-- Contact Box -->
+            <section class="contact-box">
+                <h3>Contacto Oficial del Desarrollador</h3>
+                <p>
+                    Si tienes dudas, consultas técnicas o deseas ejercer tus derechos respecto a esta política de privacidad, comunícate directamente con el equipo de desarrollo:
+                </p>
+                <a href="mailto:avalos.marko@gmail.com" class="email-badge">
+                    <span>✉️</span>
+                    <span>avalos.marko@gmail.com</span>
+                </a>
+                <p style="margin-top: 14px; font-size: 0.85rem; color: var(--text-dark);">
+                    Responsable: Marko Avalos / Zionix Studio — Lima, Perú.
+                </p>
+            </section>
+        </div>
+
+        <!-- ======================= ENGLISH CONTENT ======================= -->
+        <div id="content-en" class="lang-content hidden">
+            <section class="hero-card">
+                <h2 class="hero-title">Official Privacy Policy</h2>
+                <p style="color: var(--text-muted); font-size: 1rem;">
+                    Full transparency regarding data protection and privacy for users of <strong>Sónica Perú - Radios en Vivo HD</strong>.
+                </p>
+                <div class="hero-meta">
+                    <span class="meta-pill highlight">ID: com.zionixstudio.sonicaperu</span>
+                    <span class="meta-pill">Developer: Zionix Studio / Marko Avalos</span>
+                    <span class="meta-pill">Effective Date: October 2026</span>
+                </div>
+            </section>
+
+            <!-- Quick Pillars -->
+            <div class="grid-cards">
+                <div class="mini-card">
+                    <span class="mini-card-icon">⚡</span>
+                    <h3>Live Audio Streaming</h3>
+                    <p>We do not store, intercept, or record any audio streams. 100% direct, real-time live broadcasting.</p>
+                </div>
+                <div class="mini-card">
+                    <span class="mini-card-icon">🛡️</span>
+                    <h3>No Registration Required</h3>
+                    <p>We do not collect names, passwords, phone numbers, or billing info. Instant free access.</p>
+                </div>
+                <div class="mini-card">
+                    <span class="mini-card-icon">🎯</span>
+                    <h3>Transparent Ads &amp; Analytics</h3>
+                    <p>We utilize Google AdMob &amp; Firebase through anonymous mobile advertising IDs conforming to Google Play policies.</p>
+                </div>
+            </div>
+
+            <!-- Clause 1 -->
+            <article class="section-box">
+                <div class="section-header">
+                    <div class="section-number">01</div>
+                    <h2 class="section-title">Service Type and Real-Time Audio Streaming</h2>
+                </div>
+                <p>
+                    <strong>Sónica Perú - Radios en Vivo</strong> is a native mobile application crafted exclusively for tuning and listening to live Peruvian radio broadcasts (FM, AM, and authorized digital streams) using standard media streaming protocols (HLS, AAC, MP3, Icecast).
+                </p>
+                <div class="callout">
+                    <strong>Legal Streaming Commitment:</strong> The application <strong>DOES NOT store, intercept, or record</strong> any live audio streams on remote servers or local device storage. Audio streams are buffered strictly in volatile memory in real time while playback is active.
+                </div>
+                <p>
+                    All broadcast contents, logos, and trademarks belong to their respective licensed broadcasting networks and copyright holders.
+                </p>
+            </article>
+
+            <!-- Clause 2 -->
+            <article class="section-box">
+                <div class="section-header">
+                    <div class="section-number">02</div>
+                    <h2 class="section-title">Data &amp; Analytics Transparency (AdMob &amp; Firebase)</h2>
+                </div>
+                <p>
+                    To maintain our free live service and ensure optimal app performance across various mobile devices, the app integrates industry-standard SDKs provided by Google LLC:
+                </p>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Provider / SDK</th>
+                                <th>Purpose</th>
+                                <th>Data Processed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Google AdMob</strong></td>
+                                <td>Ad serving and monetization (banner, interstitial ads).</td>
+                                <td>Android Advertising ID (AAID/GAID) or iOS IDFA, coarse location (country/city), ad interaction metrics.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google Analytics for Firebase</strong></td>
+                                <td>Aggregated anonymous performance metrics and UX diagnostics.</td>
+                                <td>Device model, OS version, session duration, station interaction events.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Firebase Crashlytics</strong></td>
+                                <td>Crash diagnostics, stability tracking, and rapid bug fixing.</td>
+                                <td>Technical stack traces and memory diagnostic snapshots at time of failure.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout">
+                    <strong>Notice on Advertising IDs:</strong> Advertising identifiers (AAID / IDFA) are anonymous, user-resettable identifiers supplied by your operating system. They do not reveal your real name, physical address, email address, or private documents.
+                </div>
+            </article>
+
+            <!-- Clause 3 -->
+            <article class="section-box">
+                <div class="section-header">
+                    <div class="section-number">03</div>
+                    <h2 class="section-title">Requested Device Permissions</h2>
+                </div>
+                <p>
+                    The app requests only minimal and strictly necessary system permissions required for a seamless modern audio playback experience:
+                </p>
+                <ul>
+                    <li><strong>Internet &amp; Network State (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong> Required to stream online radio feeds and switch between fallback links if network conditions fluctuate.</li>
+                    <li><strong>Foreground Media Service (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>):</strong> Keeps audio playing smoothly in the background and with your screen locked.</li>
+                    <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Displays media playback notifications, artwork, and playback controls (play/pause/stop) on your lock screen and status bar.</li>
+                    <li><strong>Wake Lock (<code>WAKE_LOCK</code>):</strong> Prevents system CPU sleep interruptions during continuous audio listening sessions.</li>
+                </ul>
+                <div class="callout alert">
+                    <strong>Privacy Guarantee:</strong> Sónica Perú <strong>NEVER</strong> requests sensitive permissions such as Camera, Microphone, Contacts, Shared Storage, Call Logs, or precise GPS location.
+                </div>
+            </article>
+
+            <!-- Clause 4 -->
+            <article class="section-box">
+                <div class="section-header">
+                    <div class="section-number">04</div>
+                    <h2 class="section-title">User Rights &amp; Data Protection Standards</h2>
+                </div>
+                <p>
+                    We uphold user privacy rights in compliance with global and regional data protection regulations:
+                </p>
+                <ul>
+                    <li><strong>Peru - Law No. 29733 (Personal Data Protection Act):</strong> Rights to information, access, rectification, cancellation, and opposition.</li>
+                    <li><strong>European Union - GDPR:</strong> Right to object to processing, access, data deletion, and ad profiling restrictions.</li>
+                    <li><strong>United States - CCPA / CPRA (California):</strong> Right to opt-out of the sharing or processing of personal information for targeted advertising.</li>
+                </ul>
+
+                <h3 style="font-size: 1.05rem; margin-top: 18px; margin-bottom: 8px; color: var(--cyber-cyan);">
+                    How to reset or opt-out of personalized advertising on your device:
+                </h3>
+                <p>
+                    You can reset or opt out of personalized ads at any time via your device settings:
+                </p>
+                <ul>
+                    <li><strong>On Android:</strong> Navigate to <em>Settings &gt; Google &gt; Ads</em> (or <em>Privacy &gt; Ads</em>) and tap <em>"Reset advertising ID"</em> or <em>"Delete advertising ID"</em>.</li>
+                    <li><strong>On iOS:</strong> Go to <em>Settings &gt; Privacy &amp; Security &gt; Tracking</em> and toggle off <em>"Allow Apps to Request to Track"</em>.</li>
+                </ul>
+            </article>
+
+            <!-- Clause 5 -->
+            <article class="section-box">
+                <div class="section-header">
+                    <div class="section-number">05</div>
+                    <h2 class="section-title">Children’s Privacy (COPPA Compliance)</h2>
+                </div>
+                <p>
+                    Our application is not targeted at children under the age of 13 (or under 16 in the European Economic Area). We do not knowingly collect personal data from children. Parents or guardians may contact us directly to request the removal of any data associated with a minor.
+                </p>
+            </article>
+
+            <!-- Clause 6 -->
+            <article class="section-box">
+                <div class="section-header">
+                    <div class="section-number">06</div>
+                    <h2 class="section-title">Information Security and Policy Updates</h2>
+                </div>
+                <p>
+                    We employ modern TLS/HTTPS encryption standards for all app metadata network requests. This policy is routinely reviewed and maintained to adhere to Google Play Store and App Store policy updates.
+                </p>
+            </article>
+
+            <!-- Contact Box -->
+            <section class="contact-box">
+                <h3>Verified Developer Contact</h3>
+                <p>
+                    For inquiries, feedback, or exercising your privacy rights, contact the developer directly:
+                </p>
+                <a href="mailto:avalos.marko@gmail.com" class="email-badge">
+                    <span>✉️</span>
+                    <span>avalos.marko@gmail.com</span>
+                </a>
+                <p style="margin-top: 14px; font-size: 0.85rem; color: var(--text-dark);">
+                    Developer: Marko Avalos / Zionix Studio — Lima, Peru.
+                </p>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Sónica Perú. Desarrollado por Zionix Studio / Marko Avalos. Todos los derechos reservados.</p>
+        <p style="margin-top: 4px;">
+            <a href="https://github.com/mavalos2025/sonica-peru" target="_blank" rel="noopener">GitHub Repository</a> • 
+            <a href="mailto:avalos.marko@gmail.com">Soporte Técnico</a>
+        </p>
+    </footer>
+
+    <script>
+        function setLang(lang) {
+            const esContent = document.getElementById('content-es');
+            const enContent = document.getElementById('content-en');
+            const btnEs = document.getElementById('btn-es');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'en') {
+                esContent.classList.add('hidden');
+                enContent.classList.remove('hidden');
+                btnEn.classList.add('active');
+                btnEs.classList.remove('active');
+                document.documentElement.lang = 'en';
+            } else {
+                enContent.classList.add('hidden');
+                esContent.classList.remove('hidden');
+                btnEs.classList.add('active');
+                btnEn.classList.remove('active');
+                document.documentElement.lang = 'es';
+            }
+        }
+    </script>
+</body>
+</html>
